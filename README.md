@@ -19,3 +19,7 @@ In addition to my passion for technology, I also enjoy music, reading about tech
 #### [`Braian Quintian`](https://www.instagram.com/braian.qloq/)👈
 
 ## Thank you for visiting my profile!
+
+Currently Coding & Listening to:
+
+[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&redirect=true)
