@@ -22,4 +22,4 @@ In addition to my passion for technology, I also enjoy music, reading about tech
 
 Currently Coding & Listening to:
 
-[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&redirect=true)
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31bqqnfaslzmjoxddviukpc7r7si&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=false)](https://spotify-github-profile.kittinanx.com/api/view?uid=31bqqnfaslzmjoxddviukpc7r7si&redirect=true)
