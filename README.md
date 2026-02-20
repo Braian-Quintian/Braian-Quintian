@@ -28,48 +28,58 @@
 - 🔭 Currently building with **NestJS · Next.js · TypeScript**
 - 💳 Working on **payment systems & fintech platforms**
 - 🌱 Always learning — diving deep into **back-end architecture**
-- 🏀 Basketball fan · 🎵 Music lover · 📚 Tech reader
+- 🏀 Basketball fan &nbsp;·&nbsp; 🎵 Music lover &nbsp;·&nbsp; 📚 Tech reader
 - ⚡ I believe in balance: great code **and** a great life
 - 📫 **bquintianromero@gmail.com**
 
 <br clear="both"/>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ---
 
 <!--Tech Stack-->
 <h2 align="center">🛠️ Tech Stack</h2>
 
-<details open>
-<summary><b>🎨 Frontend</b></summary>
-<br>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,angular,tailwind,bootstrap&perline=9" />
-</p>
-</details>
-
-<details open>
-<summary><b>⚙️ Backend</b></summary>
-<br>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,python&perline=9" />
-</p>
-</details>
-
-<details open>
-<summary><b>🗄️ Databases</b></summary>
-<br>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,sqlite&perline=9" />
-</p>
-</details>
-
-<details open>
-<summary><b>☁️ Tools & Cloud</b></summary>
-<br>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,docker,aws,vscode,postman,linux&perline=9" />
-</p>
-</details>
+<table align="center" border="0" cellpadding="10">
+  <tr>
+    <td align="center" width="100">
+      <b>🎨 Frontend</b>
+    </td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,angular,tailwind,bootstrap&perline=9" />
+      <br/>
+      <p align="center">
+        <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white" />
+        <img src="https://img.shields.io/badge/PrimeNG-DD0031?style=flat-square&logo=angular&logoColor=white" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>⚙️ Backend</b>
+    </td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,python&perline=9" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>🗄️ Databases</b>
+    </td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,sqlite&perline=9" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>☁️ Tools & Cloud</b>
+    </td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=git,github,docker,aws,digitalocean,vscode,postman,linux&perline=9" />
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -79,24 +89,23 @@
   <img src="https://skillicons.dev/icons?i=java,spring,graphql&perline=6" />
 </p>
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
 ---
 
 <!--GitHub Stats-->
 <h2 align="center">📊 GitHub Stats</h2>
 
 <div align="center">
-  <table border="none">
-    <tr>
-      <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=Braian-Quintian&theme=tokyonight&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00b4d8&icon_color=00b4d8" />
-        <br/><br/>
-        <img src="https://streak-stats.demolab.com?user=Braian-Quintian&theme=tokyonight&hide_border=true&background=0D1117&ring=00b4d8&fire=00b4d8&currStreakLabel=00b4d8" />
-      </td>
-      <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Braian-Quintian&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00b4d8&layout=compact&langs_count=10" />
-      </td>
-    </tr>
-  </table>
+  <img src="https://github-readme-stats.vercel.app/api?username=Braian-Quintian&theme=tokyonight&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00b4d8&icon_color=00b4d8&cache_seconds=1800" height="180"/>
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Braian-Quintian&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00b4d8&layout=compact&langs_count=8&cache_seconds=1800" height="180"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Braian-Quintian&theme=tokyonight&hide_border=true&background=0D1117&ring=00b4d8&fire=00b4d8&currStreakLabel=00b4d8" height="180"/>
 </div>
 
 <br/>
@@ -105,6 +114,8 @@
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Braian-Quintian&bg_color=0D1117&color=00b4d8&line=00b4d8&point=ffffff&area=true&hide_border=true" width="95%"/>
 </p>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ---
 
@@ -121,6 +132,8 @@
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
 </p>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ---
 
@@ -152,28 +165,22 @@
 
 ---
 
-<!--Snake-->
+<!--Snake — uses static fallback (works without GitHub Actions)-->
 <h2 align="center">🐍 Contribution Snake</h2>
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Braian-Quintian/Braian-Quintian/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Braian-Quintian/Braian-Quintian/output/github-contribution-grid-snake.svg" />
-    <img alt="github-snake" src="https://github.com/1999AZZAR/1999AZZAR/blob/readme/resources/grid-snake.svg" />
-  </picture>
+  <img src="https://github.com/1999AZZAR/1999AZZAR/blob/readme/resources/grid-snake.svg" alt="snake animation"/>
 </div>
 
 ---
 
-<!--Footer-->
-<div align="center">
+<!--Footer quote-->
+<p align="center">
   <i>💡 "Programming my future, one line at a time."</i>
-</div>
-
-<br/>
+</p>
 
 <!--Visit count-->
 <p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=Braian-Quintian&icon=5&color=1" />
+  <img src="https://komarev.com/ghpvc/?username=Braian-Quintian&label=Total+Visits&color=00b4d8&style=for-the-badge" />
 </p>
 
 <!--Bottom wave-->
