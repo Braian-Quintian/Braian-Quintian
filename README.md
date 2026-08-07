@@ -140,8 +140,8 @@
 <!--Spotify-->
 <h2 align="center">🎵 Currently Coding & Listening To</h2>
 <p align="center">
-  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31bqqnfaslzmjoxddviukpc7r7si&redirect=true">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31bqqnfaslzmjoxddviukpc7r7si&cover_image=true&theme=natemoo-re&show_offline=false&background_color=0d1117&interchange=false&bar_color=00b4d8&bar_color_cover=false" />
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=true&hide_remaster=true&bar_color_cover=true">
   </a>
 </p>
 
