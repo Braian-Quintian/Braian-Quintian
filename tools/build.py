@@ -31,7 +31,7 @@ T = {
         sub="full-stack · payments · cloud & security · Colombia",
         prompt="building one API for every way LATAM pays",
         now_1="Leading engineering at 88Pay: one API for the ways Latin America pays.",
-        now_2="shipping → hardened payment APIs · AWS infra as code · security operations",
+        now_2="shipping → payment APIs · infrastructure as code · security engineering",
         sections=[
             ("whoami", "// who's behind the keyboard"),
             ("payment rails", "// one contract on top, many edge cases below"),
@@ -45,9 +45,9 @@ T = {
         rails=[
             ("Colombia", "PSE · Nequi · Daviplata"),
             ("Brazil", "Pix"),
-            ("Venezuela", "Pago Móvil · R4 · BNC"),
+            ("Venezuela", "Pago Móvil"),
             ("Costa Rica", "SINPE Móvil"),
-            ("Cash", "PayCash · PA · HN · CR"),
+            ("Cash", "cash vouchers"),
             ("Cards", "Visa · Mastercard"),
             ("Crypto", "USDT"),
             ("Your rail next?", "let's talk →"),
@@ -62,7 +62,7 @@ T = {
         sub="full-stack · pagos · cloud y seguridad · Colombia",
         prompt="construyendo una API para cada forma de pagar en LATAM",
         now_1="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica.",
-        now_2="enviando → APIs de pago blindadas · infra AWS como código · operaciones de seguridad",
+        now_2="enviando → APIs de pago · infraestructura como código · ingeniería de seguridad",
         sections=[
             ("whoami", "// quién está detrás del teclado"),
             ("rieles de pago", "// un contrato arriba, muchos casos borde abajo"),
@@ -76,9 +76,9 @@ T = {
         rails=[
             ("Colombia", "PSE · Nequi · Daviplata"),
             ("Brasil", "Pix"),
-            ("Venezuela", "Pago Móvil · R4 · BNC"),
+            ("Venezuela", "Pago Móvil"),
             ("Costa Rica", "SINPE Móvil"),
-            ("Efectivo", "PayCash · PA · HN · CR"),
+            ("Efectivo", "pagos en efectivo"),
             ("Tarjetas", "Visa · Mastercard"),
             ("Cripto", "USDT"),
             ("¿Tu riel sigue?", "hablemos →"),
@@ -338,11 +338,11 @@ COPY = {
 };""",
         bullets=[
             "💳 By day I wire up the ways Latin America pays (bank transfers, wallets, cards, cash and crypto) behind **one API**.",
-            "🔐 I care about the boring stuff that keeps money safe: signed commits, least-privilege infra and audits that actually close.",
+            "🔐 I care about the boring stuff that keeps money safe: secure-by-default code, least privilege and reviews that actually happen.",
             "🎓 Systems Engineering student. Learning out loud.",
             f"📫 Reach me at **{EMAIL}**",
         ],
-        rails_note="Every rail on the map is live in the platform I work on. Same contract on top, wildly different edge cases underneath.",
+        rails_note="The kinds of payment rails I build integrations for. Same contract on top, wildly different edge cases underneath.",
         stack=[("🎨 Frontend", "html,css,js,ts,react,nextjs,angular,tailwind"),
                ("⚙️ Backend", "nodejs,nestjs,express,bun,python"),
                ("🗄️ Data", "postgres,mysql,mongodb,sqlite"),
@@ -375,11 +375,11 @@ COPY = {
 };""",
         bullets=[
             "💳 De día conecto las formas de pagar en Latinoamérica (transferencias, billeteras, tarjetas, efectivo y cripto) detrás de **una sola API**.",
-            "🔐 Me importa lo aburrido que mantiene el dinero seguro: commits firmados, infra con mínimo privilegio y auditorías que de verdad se cierran.",
+            "🔐 Me importa lo aburrido que mantiene el dinero seguro: código seguro por defecto, mínimo privilegio y revisiones que de verdad se hacen.",
             "🎓 Estudiante de Ingeniería de Sistemas. Aprendiendo en voz alta.",
             f"📫 Escríbeme a **{EMAIL}**",
         ],
-        rails_note="Cada riel del mapa está en producción en la plataforma donde trabajo. El mismo contrato arriba, casos borde muy distintos abajo.",
+        rails_note="Los tipos de rieles de pago para los que construyo integraciones. El mismo contrato arriba, casos borde muy distintos abajo.",
         stack=[("🎨 Frontend", "html,css,js,ts,react,nextjs,angular,tailwind"),
                ("⚙️ Backend", "nodejs,nestjs,express,bun,python"),
                ("🗄️ Datos", "postgres,mysql,mongodb,sqlite"),
@@ -432,7 +432,7 @@ def readme(lang):
 <p align="center">
   <img src="https://img.shields.io/badge/{k['here']}-00b4d8?style=flat-square" alt="{k['here']}"/>
   <a href="{other_file}"><img src="https://img.shields.io/badge/{other_label}-30363d?style=flat-square" alt="{other_label}"/></a>
-  <img src="https://komarev.com/ghpvc/?username={USER}&label=views&color=00b4d8&style=flat-square" alt="views"/>
+  <img src="https://komarev.com/ghpvc/?username={USER}&base=273&label=views&color=00b4d8&style=flat-square" alt="views"/>
 </p>
 
 <p align="center"><code>{USER}@github:~$ cat README.md</code><br/><sub>{nav}</sub></p>

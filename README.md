@@ -15,7 +15,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/English-00b4d8?style=flat-square" alt="English"/>
   <a href="README.es.md"><img src="https://img.shields.io/badge/Español-30363d?style=flat-square" alt="Español"/></a>
-  <img src="https://komarev.com/ghpvc/?username=braqon&label=views&color=00b4d8&style=flat-square" alt="views"/>
+  <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views"/>
 </p>
 
 <p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rails</a> · <a href="#stack">stack</a> · <a href="#projects">projects</a> · <a href="#telemetry">telemetry</a> · <a href="#off-keyboard">off-keyboard</a></sub></p>
@@ -40,7 +40,7 @@ const braqon = {
 ```
 
 - 💳 By day I wire up the ways Latin America pays (bank transfers, wallets, cards, cash and crypto) behind **one API**.
-- 🔐 I care about the boring stuff that keeps money safe: signed commits, least-privilege infra and audits that actually close.
+- 🔐 I care about the boring stuff that keeps money safe: secure-by-default code, least privilege and reviews that actually happen.
 - 🎓 Systems Engineering student. Learning out loud.
 - 📫 Reach me at **bquintianromero@gmail.com**
 
@@ -49,7 +49,7 @@ const braqon = {
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/rails-en.svg"/><img src="assets/light/rails-en.svg" width="100%" alt="payment rails"/></picture>
 
-<p align="center"><sub>Every rail on the map is live in the platform I work on. Same contract on top, wildly different edge cases underneath.</sub></p>
+<p align="center"><sub>The kinds of payment rails I build integrations for. Same contract on top, wildly different edge cases underneath.</sub></p>
 
 <a name="stack"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03-en.svg"/><img src="assets/light/s03-en.svg" width="100%" alt="stack"/></picture>
