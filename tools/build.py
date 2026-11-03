@@ -656,6 +656,8 @@ def readme(lang):
 
 <p align="center">
   {langs}
+</p>
+<p align="center">
   <img src="https://komarev.com/ghpvc/?username={USER}&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
