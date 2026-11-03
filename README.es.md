@@ -18,6 +18,8 @@
   <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
+<a href="https://www.npmjs.com/package/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/terminal-es.svg"/><img src="assets/light/terminal-es.svg" width="100%" alt="terminal: whoami, ls ~/braqon-dev, cat stack.txt, npx braqon"/></picture></a>
+
 <p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#building">construyendo</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-es.svg"/><img src="assets/light/now-es.svg" width="100%" alt="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica."/></picture>
@@ -112,6 +114,10 @@ const braqon = {
 
 <p align="center"><b>🎧 Programando con</b><br/>
   <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&redirect=true"><img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=true&hide_remaster=true&bar_color_cover=true" alt="Spotify"/></a>
+</p>
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="dev quote"/>
 </p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/footer-es.svg"/><img src="assets/light/footer-es.svg" width="100%" alt="exit"/></picture>
