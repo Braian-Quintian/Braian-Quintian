@@ -15,7 +15,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Español-00b4d8?style=flat-square" alt="Español"/>
   <a href="README.md"><img src="https://img.shields.io/badge/English-30363d?style=flat-square" alt="English"/></a>
-  <img src="https://komarev.com/ghpvc/?username=braqon&label=views&color=00b4d8&style=flat-square" alt="views"/>
+  <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views"/>
 </p>
 
 <p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#projects">proyectos</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
@@ -40,7 +40,7 @@ const braqon = {
 ```
 
 - 💳 De día conecto las formas de pagar en Latinoamérica (transferencias, billeteras, tarjetas, efectivo y cripto) detrás de **una sola API**.
-- 🔐 Me importa lo aburrido que mantiene el dinero seguro: commits firmados, infra con mínimo privilegio y auditorías que de verdad se cierran.
+- 🔐 Me importa lo aburrido que mantiene el dinero seguro: código seguro por defecto, mínimo privilegio y revisiones que de verdad se hacen.
 - 🎓 Estudiante de Ingeniería de Sistemas. Aprendiendo en voz alta.
 - 📫 Escríbeme a **bquintianromero@gmail.com**
 
@@ -49,7 +49,7 @@ const braqon = {
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/rails-es.svg"/><img src="assets/light/rails-es.svg" width="100%" alt="rieles de pago"/></picture>
 
-<p align="center"><sub>Cada riel del mapa está en producción en la plataforma donde trabajo. El mismo contrato arriba, casos borde muy distintos abajo.</sub></p>
+<p align="center"><sub>Los tipos de rieles de pago para los que construyo integraciones. El mismo contrato arriba, casos borde muy distintos abajo.</sub></p>
 
 <a name="stack"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03-es.svg"/><img src="assets/light/s03-es.svg" width="100%" alt="stack"/></picture>
@@ -65,7 +65,7 @@ const braqon = {
 <a name="projects"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04-es.svg"/><img src="assets/light/s04-es.svg" width="100%" alt="proyectos"/></picture>
 
-<a href="https://github.com/braqon/express-version-api"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/project-es.svg"/><img src="assets/light/project-es.svg" width="100%" alt="express-version-api"/></picture></a>
+<a href="https://github.com/braqon-dev/express-version-api"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/project-es.svg"/><img src="assets/light/project-es.svg" width="100%" alt="express-version-api"/></picture></a>
 
 <a name="telemetry"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s05-es.svg"/><img src="assets/light/s05-es.svg" width="100%" alt="telemetría"/></picture>
