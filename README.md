@@ -13,6 +13,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/braqon-dev"><img src="https://img.shields.io/badge/BRAQON-braqon--dev-0d1117?style=flat-square&logo=github&logoColor=white" alt="BRAQON on GitHub"/></a>
+  <a href="https://x.com/braqondev"><img src="https://img.shields.io/badge/@braqondev-000000?style=flat-square&logo=x&logoColor=white" alt="X @braqondev"/></a>
+  <a href="https://www.linkedin.com/company/braqon/"><img src="https://img.shields.io/badge/LinkedIn-BRAQON-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn BRAQON"/></a>
+  <a href="https://www.youtube.com/@braqon"><img src="https://img.shields.io/badge/YouTube-@braqon-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube @braqon"/></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/English-00b4d8?style=flat-square" alt="English"/>
   <a href="README.es.md"><img src="https://img.shields.io/badge/Español-30363d?style=flat-square" alt="Español"/></a>
   <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views"/>
