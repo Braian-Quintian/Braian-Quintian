@@ -3,10 +3,9 @@
 
 Edit the content in this file, then run:  python3 tools/build.py
 Nothing here needs third-party packages; the output is plain SVG and Markdown.
-The telemetry card is generated separately by tools/telemetry.py (see the
-profile-assets workflow) because it needs live data from the GitHub API.
 """
 
+import json
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -25,19 +24,25 @@ THEMES = {
                   muted="#59636e", accent="#0077b6", soft="#00b4d8"),
 }
 
-# Contact buttons: (file, label, url). Drawn as our own SVG pills so they match the theme.
+# Official brand icons (24x24 paths) from Simple Icons 13.0.0, CC0: https://simpleicons.org
+ICONS = json.loads((Path(__file__).resolve().parent / "icons.json").read_text())
+# Brand colors; None means "use the theme's text color" (GitHub and X are black/white marks).
+ICON_COLORS = {"github": None, "linkedin": "#0A66C2", "gmail": "#EA4335",
+               "instagram": "#E4405F", "x": None, "youtube": "#FF0000"}
+
+# Contact buttons: (file, label, url, icon). Drawn as our own SVG pills so they match the theme.
 LINKS = [
-    ("github", "GITHUB", f"https://github.com/{USER}"),
-    ("linkedin", "LINKEDIN", "https://linkedin.com/in/braian-quintian"),
-    ("email", "EMAIL", f"mailto:{EMAIL}"),
-    ("instagram", "INSTAGRAM", "https://www.instagram.com/braian.qloq/"),
+    ("github", "GITHUB", f"https://github.com/{USER}", "github"),
+    ("linkedin", "LINKEDIN", "https://linkedin.com/in/braian-quintian", "linkedin"),
+    ("email", "EMAIL", f"mailto:{EMAIL}", "gmail"),
+    ("instagram", "INSTAGRAM", "https://www.instagram.com/braian.qloq/", "instagram"),
 ]
 BRAND_LINKS = [
-    ("b-github", "BRAQON-DEV", "https://github.com/braqon-dev"),
-    ("b-x", "X @BRAQONDEV", "https://x.com/braqondev"),
-    ("b-linkedin", "LINKEDIN", "https://www.linkedin.com/company/braqon/"),
-    ("b-youtube", "YOUTUBE", "https://www.youtube.com/@braqon"),
-    ("b-instagram", "INSTAGRAM", "https://www.instagram.com/braqondev/"),
+    ("b-github", "BRAQON-DEV", "https://github.com/braqon-dev", "github"),
+    ("b-x", "@BRAQONDEV", "https://x.com/braqondev", "x"),
+    ("b-linkedin", "BRAQON", "https://www.linkedin.com/company/braqon/", "linkedin"),
+    ("b-youtube", "@BRAQON", "https://www.youtube.com/@braqon", "youtube"),
+    ("b-instagram", "@BRAQONDEV", "https://www.instagram.com/braqondev/", "instagram"),
 ]
 
 # ── Content ──────────────────────────────────────────────────────────────────
@@ -68,13 +73,6 @@ T = {
             ("Cards", "debit · credit"),
             ("Crypto", "stablecoins"),
             ("Your rail next?", "let's talk →"),
-        ],
-        stack=[
-            ("FRONTEND", ["TypeScript", "React", "Next.js", "Angular", "Tailwind", "HTML/CSS"]),
-            ("BACKEND", ["Node.js", "NestJS", "Express", "Bun", "Python"]),
-            ("DATA", ["PostgreSQL", "MySQL", "MongoDB", "SQLite"]),
-            ("CLOUD & TOOLS", ["AWS", "Terraform", "Docker", "GitHub Actions", "Linux", "Postman"]),
-            ("LEARNING", ["Java", "Spring Boot", "GraphQL"]),
         ],
         express_desc=["Versioned routes and APIs for Express.js,", "so /v1 and /v2 live together in peace."],
         express_meta="npm · JSR · GitHub Packages",
@@ -108,13 +106,6 @@ T = {
             ("Tarjetas", "débito · crédito"),
             ("Cripto", "stablecoins"),
             ("¿Tu riel sigue?", "hablemos →"),
-        ],
-        stack=[
-            ("FRONTEND", ["TypeScript", "React", "Next.js", "Angular", "Tailwind", "HTML/CSS"]),
-            ("BACKEND", ["Node.js", "NestJS", "Express", "Bun", "Python"]),
-            ("DATOS", ["PostgreSQL", "MySQL", "MongoDB", "SQLite"]),
-            ("CLOUD Y HERRAMIENTAS", ["AWS", "Terraform", "Docker", "GitHub Actions", "Linux", "Postman"]),
-            ("APRENDIENDO", ["Java", "Spring Boot", "GraphQL"]),
         ],
         express_desc=["Rutas y APIs versionadas para Express.js,", "para que /v1 y /v2 convivan en paz."],
         express_meta="npm · JSR · GitHub Packages",
@@ -227,17 +218,19 @@ def hero(t, c):
     return svg(height, body, c, DRAW_CSS)
 
 
-def button(label, c, active=False):
-    """A pill-shaped link button; height 44, width fits the label."""
-    width = round(40 + len(label) * 9.4 + 22)
+def button(label, c, active=False, icon=None):
+    """A pill-shaped link button (height 44) with the brand's official icon when given."""
+    start = 48 if icon else 36
+    width = round(start + len(label) * 9.4 + 22)
     fill = c["accent"] if active else c["panel"]
     fg = c["bg"] if active else c["fg"]
-    dot = c["bg"] if active else c["accent"]
-    body = (
-        f'<rect x="1" y="1" width="{width-2}" height="42" rx="21" fill="{fill}" stroke="{c["accent"] if active else c["border"]}"/>'
-        f'<circle cx="22" cy="22" r="4" fill="{dot}"/>'
-        + text(36, 27, e(label), c, size=14, color=fg, font=MONO, weight=700, extra=' letter-spacing="1.5"')
-    )
+    body = f'<rect x="1" y="1" width="{width-2}" height="42" rx="21" fill="{fill}" stroke="{c["accent"] if active else c["border"]}"/>'
+    if icon:
+        color = ICON_COLORS[icon] or c["fg"]
+        body += f'<path transform="translate(16,12) scale(0.8333)" fill="{color}" d="{ICONS[icon]}"/>'
+    else:
+        body += f'<circle cx="22" cy="22" r="4" fill="{c["bg"] if active else c["accent"]}"/>'
+    body += text(start, 27, e(label), c, size=14, color=fg, font=MONO, weight=700, extra=' letter-spacing="1.5"')
     return svg(44, body, c, width=width)
 
 
@@ -304,25 +297,6 @@ def rails(t, c):
     return svg(height, "".join(parts) + hub, c)
 
 
-def stack(t, c):
-    row_h, top = 60, 24
-    rows = t["stack"]
-    height = top * 2 + row_h * len(rows) - 12
-    parts = [panel(1, 1, W - 2, height - 2, c)]
-    for i, (label, items) in enumerate(rows):
-        y = top + i * row_h
-        learning = i == len(rows) - 1
-        if i:
-            parts.append(f'<rect x="32" y="{y - 14}" width="{W - 64}" height="1" fill="{c["border"]}" opacity=".6"/>')
-        parts.append(text(40, y + 22, e(label), c, size=13, color=c["accent"], font=MONO, weight=700,
-                          extra=' letter-spacing="2"'))
-        x = 300
-        for item in items:
-            piece, w = chip(x, y, item, c, dashed=learning)
-            parts.append(piece)
-            x += w + 10
-    return svg(height, "".join(parts), c)
-
 
 def project_card(title, desc, meta, c, view, mark=False, live=True):
     width, height = 588, 220
@@ -355,7 +329,7 @@ def build_assets():
     for theme, c in THEMES.items():
         out = ROOT / "assets" / theme
         out.mkdir(parents=True, exist_ok=True)
-        files = {f"l-{name}.svg": button(label, c) for name, label, _ in LINKS + BRAND_LINKS}
+        files = {f"l-{name}.svg": button(label, c, icon=icon) for name, label, _, icon in LINKS + BRAND_LINKS}
         files["lang-en-on.svg"] = button("EN", c, active=True)
         files["lang-en-off.svg"] = button("EN", c)
         files["lang-es-on.svg"] = button("ES", c, active=True)
@@ -364,7 +338,6 @@ def build_assets():
             files[f"hero-{lang}.svg"] = hero(t, c)
             files[f"now-{lang}.svg"] = now(t, c)
             files[f"rails-{lang}.svg"] = rails(t, c)
-            files[f"stack-{lang}.svg"] = stack(t, c)
             files[f"p-express-{lang}.svg"] = project_card(
                 "express-version-api", t["express_desc"], t["express_meta"], c, t["view"])
             files[f"p-braqon-{lang}.svg"] = project_card(
@@ -375,8 +348,9 @@ def build_assets():
         for name, content in files.items():
             (out / name).write_text(content, encoding="utf-8")
         # Assets from earlier versions that the READMEs no longer use.
-        for old in out.glob("project-*.svg"):
-            old.unlink()
+        for pattern in ("project-*.svg", "stack-*.svg"):
+            for old in out.glob(pattern):
+                old.unlink()
 
 # ── READMEs ──────────────────────────────────────────────────────────────────
 
@@ -395,6 +369,18 @@ def link_button(name, label, url, height=34):
 
 
 OUTPUT = f"https://raw.githubusercontent.com/{USER}/{USER}/output"
+SUMMARY = "https://github-profile-summary-cards.vercel.app/api/cards/{kind}?username=" + USER + "&theme={theme}{extra}"
+STREAK = "https://streak-stats.demolab.com?user=" + USER + "&hide_border=true&theme={}"
+
+
+def card(url_dark, url_light, alt, height):
+    return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="{url_dark}"/>'
+            f'<img src="{url_light}" height="{height}" alt="{e(alt)}"/></picture>')
+
+
+def summary(kind, alt, height, extra=""):
+    return card(SUMMARY.format(kind=kind, theme="github_dark", extra=extra),
+                SUMMARY.format(kind=kind, theme="default", extra=extra), alt, height)
 
 COPY = {
     "en": dict(
@@ -417,9 +403,14 @@ COPY = {
             "🎓 Systems Engineering student. Learning out loud.",
             f"📫 Reach me at **{EMAIL}**",
         ],
+        stack=[("🎨 Frontend", "html,css,js,ts,react,nextjs,angular,tailwind"),
+               ("⚙️ Backend", "nodejs,nestjs,express,bun,python"),
+               ("🗄️ Data", "postgres,mysql,mongodb,sqlite"),
+               ("☁️ Cloud & tools", "aws,terraform,docker,linux,git,github,postman,vscode"),
+               ("📚 Learning", "java,spring,graphql")],
         rails_note="The kinds of payment rails I build integrations for. Same contract on top, wildly different edge cases underneath.",
         brand="BRAQON on the internet",
-        snake="🐍 a snake eating my contributions · telemetry and snake refresh every 12 hours",
+        snake="🐍 a snake eating my contributions, refreshed every 12 hours",
         facts_title="🎲 Random facts (click me)",
         facts=[
             "🏷️ **BRAQON** = **BRA**ian + **Q**uintian + **ON**. Yes, I did the math.",
@@ -450,9 +441,14 @@ COPY = {
             "🎓 Estudiante de Ingeniería de Sistemas. Aprendiendo en voz alta.",
             f"📫 Escríbeme a **{EMAIL}**",
         ],
+        stack=[("🎨 Frontend", "html,css,js,ts,react,nextjs,angular,tailwind"),
+               ("⚙️ Backend", "nodejs,nestjs,express,bun,python"),
+               ("🗄️ Datos", "postgres,mysql,mongodb,sqlite"),
+               ("☁️ Cloud y herramientas", "aws,terraform,docker,linux,git,github,postman,vscode"),
+               ("📚 Aprendiendo", "java,spring,graphql")],
         rails_note="Los tipos de rieles de pago para los que construyo integraciones. El mismo contrato arriba, casos borde muy distintos abajo.",
         brand="BRAQON en internet",
-        snake="🐍 una serpiente comiéndose mis contribuciones · la telemetría y la serpiente se actualizan cada 12 horas",
+        snake="🐍 una serpiente comiéndose mis contribuciones, se actualiza cada 12 horas",
         facts_title="🎲 Datos random (dale clic)",
         facts=[
             "🏷️ **BRAQON** = **BRA**ian + **Q**uintian + **ON**. Sí, hice la cuenta.",
@@ -470,11 +466,17 @@ def readme(lang):
     t, k = T[lang], COPY[lang]
     anchors = ["whoami", "rails", "stack", "building", "telemetry", "off-keyboard"]
     nav = " · ".join(f'<a href="#{a}">{label}</a>' for label, a in zip(k["nav"], anchors))
-    personal = "\n  ".join(link_button(n, label, url) for n, label, url in LINKS)
-    brand = "\n  ".join(link_button(n, label, url, height=30) for n, label, url in BRAND_LINKS)
+    personal = "\n  ".join(link_button(n, label, url) for n, label, url, _ in LINKS)
+    brand = "\n  ".join(link_button(n, label, url, height=30) for n, label, url, _ in BRAND_LINKS)
     here = pic(f"assets/{{t}}/lang-{lang}-on.svg", lang.upper(), height=30)
     other = f'<a href="{k["other_file"]}">{pic(f"assets/{{t}}/lang-{k["other"]}-off.svg", k["other"].upper(), height=30)}</a>'
     langs = (here + "\n  " + other) if lang == "en" else (other + "\n  " + here)
+
+    stack_rows = "\n".join(
+        f'  <tr><td align="center" width="200"><b>{label}</b></td>'
+        f'<td><img src="https://skillicons.dev/icons?i={icons}&perline=8" alt="{e(label)}"/></td></tr>'
+        for label, icons in k["stack"]
+    )
 
     def sec(n, anchor):
         return f'<a name="{anchor}"></a>\n{asset(f"s{n:02d}", lang, t["sections"][n - 1][0])}\n'
@@ -512,7 +514,9 @@ def readme(lang):
 <p align="center"><sub>{k["rails_note"]}</sub></p>
 
 {sec(3, "stack")}
-{asset("stack", lang, "stack")}
+<table align="center">
+{stack_rows}
+</table>
 
 {sec(4, "building")}
 <p align="center">
@@ -526,7 +530,15 @@ def readme(lang):
 
 {sec(5, "telemetry")}
 <p align="center">
-  {pic(OUTPUT + "/telemetry-" + lang + "-{t}.svg", "GitHub telemetry")}
+  {summary("profile-details", "profile details", 200).replace('height="200"', 'width="100%"')}
+</p>
+<p align="center">
+  {summary("stats", "stats", 165)}
+  {summary("most-commit-language", "top languages", 165)}
+</p>
+<p align="center">
+  {card(STREAK.format("github-dark-blue"), STREAK.format("default"), "streak", 165)}
+  {summary("productive-time", "productive time", 165, "&utcOffset=-5")}
 </p>
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="{OUTPUT}/github-snake-dark.svg"/><img src="{OUTPUT}/github-snake.svg" width="100%" alt="contribution snake"/></picture>
