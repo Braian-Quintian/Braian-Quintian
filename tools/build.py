@@ -341,18 +341,51 @@ def terminal(lang, c):
     top, left = 44, 28                        # title bar height, text inset
     prompt = f"{USER}@mac ~ % "
     height = top + 24 + lh * (2 + 2 * len(script)) + 14
-    typing, pause, hold = 0.075, 0.45, 4.0
+    think, enter, respond, settle, hold = 1.0, 0.5, 0.18, 0.3, 5.0
+
+    def keystrokes(cmd, i):
+        """Human-ish rhythm: uneven per-key delays, a beat after spaces and symbols."""
+        delays = []
+        for k, ch in enumerate(cmd):
+            d = 0.06 + ((k * 37 + i * 11 + ord(ch)) % 7) * 0.017
+            if k and cmd[k - 1] in " ~/.-":
+                d += 0.09
+            delays.append(d)
+        return delays
 
     # Build the timeline first so every animation shares one loop length.
-    t, events = 0.6, []
-    for cmd, _ in script:
-        events.append((t, cmd))
-        t += len(cmd) * typing + pause
-    total = t + 0.4 + hold
+    t, events = 0.9, []
+    for i, (cmd, _) in enumerate(script):
+        prompt_at = t
+        start = prompt_at + (think + 0.3 if i == 0 else think)
+        times, s = [], start
+        for d in keystrokes(cmd, i):
+            s += d
+            times.append(s)
+        out_at = s + enter + respond
+        events.append(dict(prompt=prompt_at, start=start, keys=times, enter=s + enter, out=out_at))
+        t = out_at + settle
+    total = t + hold
+
+    def kt(s):
+        return f"{s / total:.4f}"
+
+    def anim(attr, values, times):
+        return (f'<animate attributeName="{attr}" calcMode="discrete" values="{";".join(values)}" '
+                f'keyTimes="{";".join(times)}" dur="{total:.2f}s" repeatCount="indefinite"/>')
 
     def appear(s):
-        return (f'<animate attributeName="opacity" values="0;1" keyTimes="0;{s / total:.4f}" '
-                f'calcMode="discrete" dur="{total:.2f}s" repeatCount="indefinite"/>')
+        return anim("opacity", ["0", "1"], ["0", kt(s)])
+
+    def cursor_anim(ev, x0):
+        # Blinks while "thinking" at the prompt, stays solid while typing, gone after Enter.
+        vals, times, s, on = ["0"], ["0"], ev["prompt"], True
+        while s < ev["start"]:
+            vals.append("1" if on else "0"); times.append(kt(s)); s += 0.5; on = not on
+        vals += ["1", "0"]; times += [kt(ev["start"]), kt(ev["enter"])]
+        xs = [f"{x0:.1f}"] + [f"{x0 + (k + 1) * cw:.1f}" for k in range(len(ev["keys"]))]
+        xt = ["0"] + [kt(s) for s in ev["keys"]]
+        return anim("opacity", vals, times) + anim("x", xs, xt)
 
     def tspans(parts):
         colors = {"fg": c["fg"], "muted": c["muted"], "accent": c["accent"], "green": "#28c840"}
@@ -370,24 +403,27 @@ def terminal(lang, c):
     y = top + 24 + lh * 0.7
     body = [line(y, f'<tspan fill="{c["muted"]}">{e(login)}</tspan>')]
     x0 = left + len(prompt) * cw
-    for i, ((cmd, out), (start, _)) in enumerate(zip(script, events)):
+    block = (cw - 1, size + 3)
+    for i, ((cmd, out), ev) in enumerate(zip(script, events)):
         y += lh
         n = len(cmd)
-        widths = [f"{k * cw:.1f}" for k in range(n + 1)]
-        times = [f"{(start + k * typing) / total:.4f}" for k in range(n + 1)]
-        times[0] = "0"
+        widths = ["0"] + [f"{(k + 1) * cw:.1f}" for k in range(n)]
+        times = ["0"] + [kt(s) for s in ev["keys"]]
         body.append(
             f'<clipPath id="type{i}"><rect x="{x0 - 1:.1f}" y="{y - size - 4:.0f}" height="{lh}" width="{n * cw + 2:.1f}">'
-            f'<animate attributeName="width" calcMode="discrete" values="{";".join(widths)}" '
-            f'keyTimes="{";".join(times)}" dur="{total:.2f}s" repeatCount="indefinite"/></rect></clipPath>'
-            f'<g>{appear(start)}{line(y, prompt_spans())}'
+            f'{anim("width", widths, times)}</rect></clipPath>'
+            f'<g>{appear(ev["prompt"])}{line(y, prompt_spans())}'
             f'<text x="{x0:.1f}" y="{y}" font-family="{e(MONO)}" font-size="{size}" fill="{c["fg"]}" '
-            f'clip-path="url(#type{i})">{e(cmd)}</text></g>')
+            f'clip-path="url(#type{i})">{e(cmd)}</text></g>'
+            f'<rect x="{x0 + n * cw:.1f}" y="{y - size + 1:.0f}" width="{block[0]:.1f}" height="{block[1]}" '
+            f'fill="{c["accent"]}" opacity="0">{cursor_anim(ev, x0)}</rect>')
         y += lh
-        body.append(f'<g>{appear(start + n * typing + pause)}{line(y, tspans(out))}</g>')
+        body.append(f'<g>{appear(ev["out"])}{line(y, tspans(out))}</g>')
     y += lh
-    cursor = f'<tspan class="blink" fill="{c["accent"]}">▋</tspan>'
-    body.append(f'<g>{appear(t + 0.2)}{line(y, prompt_spans() + cursor)}</g>')
+    body.append(
+        f'<g>{appear(t)}{line(y, prompt_spans())}'
+        f'<rect class="blink" x="{x0:.1f}" y="{y - size + 1:.0f}" width="{block[0]:.1f}" height="{block[1]}" '
+        f'fill="{c["accent"]}"/></g>')
 
     title = f"{USER} — -zsh — 80×24"
     chrome = (
