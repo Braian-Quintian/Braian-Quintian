@@ -49,7 +49,7 @@ BRAND_LINKS = [
 
 T = {
     "en": dict(
-        tagline="Braian Quintian · CTO @ 88Pay",
+        tagline="Braian Quintian · Founder @ BRAQON · CTO @ 88Pay",
         sub="full-stack · payments · cloud & security · Colombia",
         prompt="building one API for every way LATAM pays",
         now_1="Leading engineering at 88Pay: one API for the ways Latin America pays.",
@@ -82,7 +82,7 @@ T = {
         footer_1="thanks for scrolling, see you in the next commit",
     ),
     "es": dict(
-        tagline="Braian Quintian · CTO @ 88Pay",
+        tagline="Braian Quintian · Founder @ BRAQON · CTO @ 88Pay",
         sub="full-stack · pagos · cloud y seguridad · Colombia",
         prompt="construyendo una API para cada forma de pagar en LATAM",
         now_1="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica.",
@@ -319,14 +319,14 @@ def project_card(title, desc, meta, c, view, mark=False, live=True):
 # SMIL keeps it working inside GitHub's <img>; without animation it shows the final screen.
 TERM_SCRIPT = {
     "en": [
-        ("whoami", [("Braian Quintian · building ", "fg"), ("BRAQON", "accent"), (" · CTO @ 88Pay · Colombia", "fg")]),
+        ("whoami", [("Braian Quintian · Founder @ ", "fg"), ("BRAQON", "accent"), (" · CTO @ 88Pay · Colombia", "fg")]),
         ("ls ~/braqon-dev", [("express-version-api", "accent"), ("    braqon-pos ", "fg"), ("(soon)", "muted"),
                              ("    payments-toolkit ", "fg"), ("(lab)", "muted")]),
         ("cat stack.txt", [("TypeScript · NestJS · Next.js · Angular · AWS · Terraform · Docker", "fg")]),
         ("npx braqon", [("→ ", "green"), ("my business card, right in your terminal. go on, run it.", "fg")]),
     ],
     "es": [
-        ("whoami", [("Braian Quintian · construyendo ", "fg"), ("BRAQON", "accent"), (" · CTO @ 88Pay · Colombia", "fg")]),
+        ("whoami", [("Braian Quintian · Founder @ ", "fg"), ("BRAQON", "accent"), (" · CTO @ 88Pay · Colombia", "fg")]),
         ("ls ~/braqon-dev", [("express-version-api", "accent"), ("    braqon-pos ", "fg"), ("(pronto)", "muted"),
                              ("    payments-toolkit ", "fg"), ("(lab)", "muted")]),
         ("cat stack.txt", [("TypeScript · NestJS · Next.js · Angular · AWS · Terraform · Docker", "fg")]),
@@ -475,7 +475,7 @@ COPY = {
         nav=["whoami", "rails", "stack", "building", "telemetry", "off-keyboard"],
         code="""const braqon = {
   name:     "Braian Quintian",
-  role:     "CTO @ 88Pay",
+  role:     ["Founder @ BRAQON", "CTO @ 88Pay"],
   based:    "Colombia 🇨🇴",
   builds:   ["payment APIs", "fintech platforms"],
   stack:    ["NestJS", "Next.js", "Angular", "TS"],
@@ -513,7 +513,7 @@ COPY = {
         nav=["whoami", "rieles", "stack", "construyendo", "telemetría", "fuera del teclado"],
         code="""const braqon = {
   nombre:     "Braian Quintian",
-  rol:        "CTO @ 88Pay",
+  rol:        ["Founder @ BRAQON", "CTO @ 88Pay"],
   desde:      "Colombia 🇨🇴",
   construye:  ["APIs de pago", "plataformas fintech"],
   stack:      ["NestJS", "Next.js", "Angular", "TS"],
