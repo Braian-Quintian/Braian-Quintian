@@ -44,6 +44,7 @@ const braqon = {
 ```
 
 - 💳 De día conecto las formas de pagar en Latinoamérica (transferencias, billeteras, tarjetas, efectivo y cripto) detrás de **una sola API**.
+- 🧩 Fuera del horario construyo [**BRAQON**](https://braqon.dev): pagos, POS y herramientas para devs desde LATAM, con núcleo open source.
 - 🔐 Me importa lo aburrido que mantiene el dinero seguro: código seguro por defecto, mínimo privilegio y revisiones que de verdad se hacen.
 - 🎓 Estudiante de Ingeniería de Sistemas. Aprendiendo en voz alta.
 - 📫 Escríbeme a **hola@braqon.dev**

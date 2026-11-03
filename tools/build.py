@@ -561,6 +561,7 @@ COPY = {
 };""",
         bullets=[
             "💳 By day I wire up the ways Latin America pays (bank transfers, wallets, cards, cash and crypto) behind **one API**.",
+            "🧩 After hours I build [**BRAQON**](https://braqon.dev): payments, POS and developer tools from LATAM, open source at the core.",
             "🔐 I care about the boring stuff that keeps money safe: secure-by-default code, least privilege and reviews that actually happen.",
             "🎓 Systems Engineering student. Learning out loud.",
             f"📫 Reach me at **{EMAIL}**",
@@ -599,6 +600,7 @@ COPY = {
 };""",
         bullets=[
             "💳 De día conecto las formas de pagar en Latinoamérica (transferencias, billeteras, tarjetas, efectivo y cripto) detrás de **una sola API**.",
+            "🧩 Fuera del horario construyo [**BRAQON**](https://braqon.dev): pagos, POS y herramientas para devs desde LATAM, con núcleo open source.",
             "🔐 Me importa lo aburrido que mantiene el dinero seguro: código seguro por defecto, mínimo privilegio y revisiones que de verdad se hacen.",
             "🎓 Estudiante de Ingeniería de Sistemas. Aprendiendo en voz alta.",
             f"📫 Escríbeme a **{EMAIL}**",
