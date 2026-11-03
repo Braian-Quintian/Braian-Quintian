@@ -44,6 +44,7 @@ const braqon = {
 ```
 
 - 💳 By day I wire up the ways Latin America pays (bank transfers, wallets, cards, cash and crypto) behind **one API**.
+- 🧩 After hours I build [**BRAQON**](https://braqon.dev): payments, POS and developer tools from LATAM, open source at the core.
 - 🔐 I care about the boring stuff that keeps money safe: secure-by-default code, least privilege and reviews that actually happen.
 - 🎓 Systems Engineering student. Learning out loud.
 - 📫 Reach me at **hola@braqon.dev**
