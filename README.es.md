@@ -18,6 +18,8 @@
   <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
+<a href="https://www.npmjs.com/package/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/terminal-es.svg"/><img src="assets/light/terminal-es.svg" width="100%" alt="terminal: whoami, ls ~/braqon-dev, cat stack.txt, npx braqon"/></picture></a>
+
 <p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#building">construyendo</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-es.svg"/><img src="assets/light/now-es.svg" width="100%" alt="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica."/></picture>

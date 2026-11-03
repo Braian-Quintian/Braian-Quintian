@@ -315,6 +315,92 @@ def project_card(title, desc, meta, c, view, mark=False, live=True):
     return svg(height, "".join(parts), c, width=width)
 
 
+# macOS-style terminal: commands type themselves, outputs appear, then it loops.
+# SMIL keeps it working inside GitHub's <img>; without animation it shows the final screen.
+TERM_SCRIPT = {
+    "en": [
+        ("whoami", [("Braian Quintian · building ", "fg"), ("BRAQON", "accent"), (" · CTO @ 88Pay · Colombia", "fg")]),
+        ("ls ~/braqon-dev", [("express-version-api", "accent"), ("    braqon-pos ", "fg"), ("(soon)", "muted"),
+                             ("    payments-toolkit ", "fg"), ("(lab)", "muted")]),
+        ("cat stack.txt", [("TypeScript · NestJS · Next.js · Angular · AWS · Terraform · Docker", "fg")]),
+        ("npx braqon", [("→ ", "green"), ("my business card, right in your terminal. go on, run it.", "fg")]),
+    ],
+    "es": [
+        ("whoami", [("Braian Quintian · construyendo ", "fg"), ("BRAQON", "accent"), (" · CTO @ 88Pay · Colombia", "fg")]),
+        ("ls ~/braqon-dev", [("express-version-api", "accent"), ("    braqon-pos ", "fg"), ("(pronto)", "muted"),
+                             ("    payments-toolkit ", "fg"), ("(lab)", "muted")]),
+        ("cat stack.txt", [("TypeScript · NestJS · Next.js · Angular · AWS · Terraform · Docker", "fg")]),
+        ("npx braqon", [("→ ", "green"), ("mi tarjeta de presentación en tu terminal. dale, córrelo.", "fg")]),
+    ],
+}
+
+
+def terminal(lang, c):
+    script = TERM_SCRIPT[lang]
+    size, lh, cw = 17, 30, 17 * 0.602        # font size, line height, monospace char width
+    top, left = 44, 28                        # title bar height, text inset
+    prompt = f"{USER}@mac ~ % "
+    height = top + 24 + lh * (2 + 2 * len(script)) + 14
+    typing, pause, hold = 0.075, 0.45, 4.0
+
+    # Build the timeline first so every animation shares one loop length.
+    t, events = 0.6, []
+    for cmd, _ in script:
+        events.append((t, cmd))
+        t += len(cmd) * typing + pause
+    total = t + 0.4 + hold
+
+    def appear(s):
+        return (f'<animate attributeName="opacity" values="0;1" keyTimes="0;{s / total:.4f}" '
+                f'calcMode="discrete" dur="{total:.2f}s" repeatCount="indefinite"/>')
+
+    def tspans(parts):
+        colors = {"fg": c["fg"], "muted": c["muted"], "accent": c["accent"], "green": "#28c840"}
+        return "".join(f'<tspan fill="{colors[k]}">{e(s)}</tspan>' for s, k in parts)
+
+    def line(y, inner, extra=""):
+        return (f'<text x="{left}" y="{y}" font-family="{e(MONO)}" font-size="{size}" '
+                f'xml:space="preserve"{extra}>{inner}</text>')
+
+    def prompt_spans():
+        return (f'<tspan fill="{c["accent"]}">{USER}@mac</tspan>'
+                f'<tspan fill="{c["fg"]}"> ~ </tspan><tspan fill="{c["muted"]}">% </tspan>')
+
+    login = "Last login: Mon Nov  2 09:41:07 on ttys001" if lang == "en" else "Último acceso: lun 2 nov 09:41:07 en ttys001"
+    y = top + 24 + lh * 0.7
+    body = [line(y, f'<tspan fill="{c["muted"]}">{e(login)}</tspan>')]
+    x0 = left + len(prompt) * cw
+    for i, ((cmd, out), (start, _)) in enumerate(zip(script, events)):
+        y += lh
+        n = len(cmd)
+        widths = [f"{k * cw:.1f}" for k in range(n + 1)]
+        times = [f"{(start + k * typing) / total:.4f}" for k in range(n + 1)]
+        times[0] = "0"
+        body.append(
+            f'<clipPath id="type{i}"><rect x="{x0 - 1:.1f}" y="{y - size - 4:.0f}" height="{lh}" width="{n * cw + 2:.1f}">'
+            f'<animate attributeName="width" calcMode="discrete" values="{";".join(widths)}" '
+            f'keyTimes="{";".join(times)}" dur="{total:.2f}s" repeatCount="indefinite"/></rect></clipPath>'
+            f'<g>{appear(start)}{line(y, prompt_spans())}'
+            f'<text x="{x0:.1f}" y="{y}" font-family="{e(MONO)}" font-size="{size}" fill="{c["fg"]}" '
+            f'clip-path="url(#type{i})">{e(cmd)}</text></g>')
+        y += lh
+        body.append(f'<g>{appear(start + n * typing + pause)}{line(y, tspans(out))}</g>')
+    y += lh
+    cursor = f'<tspan class="blink" fill="{c["accent"]}">▋</tspan>'
+    body.append(f'<g>{appear(t + 0.2)}{line(y, prompt_spans() + cursor)}</g>')
+
+    title = f"{USER} — -zsh — 80×24"
+    chrome = (
+        f'<rect x="1" y="1" width="{W - 2}" height="{height - 2}" rx="12" fill="{c["bg"]}" stroke="{c["border"]}"/>'
+        f'<path d="M1,13A12,12 0 0 1 13,1H{W - 13}A12,12 0 0 1 {W - 1},13V{top}H1Z" fill="{c["panel"]}"/>'
+        f'<rect x="1" y="{top}" width="{W - 2}" height="1" fill="{c["border"]}"/>'
+        '<circle cx="24" cy="22" r="7" fill="#ff5f57"/><circle cx="46" cy="22" r="7" fill="#febc2e"/>'
+        '<circle cx="68" cy="22" r="7" fill="#28c840"/>'
+        + text(W / 2, 27, e(title), c, size=14, color=c["muted"], weight=600, anchor="middle")
+    )
+    return svg(height, chrome + "".join(body), c)
+
+
 def footer(t, c):
     body = (
         f'<text x="{W/2}" y="40" font-family="{e(MONO)}" font-size="17" text-anchor="middle">'
@@ -337,6 +423,7 @@ def build_assets():
         for lang, t in T.items():
             files[f"hero-{lang}.svg"] = hero(t, c)
             files[f"now-{lang}.svg"] = now(t, c)
+            files[f"terminal-{lang}.svg"] = terminal(lang, c)
             files[f"rails-{lang}.svg"] = rails(t, c)
             files[f"p-express-{lang}.svg"] = project_card(
                 "express-version-api", t["express_desc"], t["express_meta"], c, t["view"])
@@ -496,6 +583,8 @@ def readme(lang):
   {langs}
   <img src="https://komarev.com/ghpvc/?username={USER}&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
+
+<a href="https://www.npmjs.com/package/braqon">{asset("terminal", lang, "terminal: whoami, ls ~/braqon-dev, cat stack.txt, npx braqon")}</a>
 
 <p align="center"><code>{USER}@github:~$ cat README.md</code><br/><sub>{nav}</sub></p>
 
