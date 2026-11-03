@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-github.svg"/><img src="assets/light/l-github.svg" height="34" alt="GITHUB"/></picture></a>
   <a href="https://linkedin.com/in/braian-quintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
-  <a href="mailto:bquintianromero@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
+  <a href="mailto:hola@braqon.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
   <a href="https://www.instagram.com/braian.qloq/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-instagram.svg"/><img src="assets/light/l-instagram.svg" height="34" alt="INSTAGRAM"/></picture></a>
 </p>
 
@@ -44,7 +44,7 @@ const braqon = {
 - 💳 De día conecto las formas de pagar en Latinoamérica (transferencias, billeteras, tarjetas, efectivo y cripto) detrás de **una sola API**.
 - 🔐 Me importa lo aburrido que mantiene el dinero seguro: código seguro por defecto, mínimo privilegio y revisiones que de verdad se hacen.
 - 🎓 Estudiante de Ingeniería de Sistemas. Aprendiendo en voz alta.
-- 📫 Escríbeme a **bquintianromero@gmail.com**
+- 📫 Escríbeme a **hola@braqon.dev**
 
 <a name="rails"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s02-es.svg"/><img src="assets/light/s02-es.svg" width="100%" alt="rieles de pago"/></picture>

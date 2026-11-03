@@ -11,7 +11,7 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parent.parent
 USER = "braqon"
-EMAIL = "bquintianromero@gmail.com"
+EMAIL = "hola@braqon.dev"
 W = 1200
 
 MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
@@ -26,15 +26,17 @@ THEMES = {
 
 # Official brand icons (24x24 paths) from Simple Icons 13.0.0, CC0: https://simpleicons.org
 ICONS = json.loads((Path(__file__).resolve().parent / "icons.json").read_text())
+# Plain envelope for the BRAQON inbox (same path as braqon-dev/.github).
+ICONS["mail"] = "M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.3-8-5.3zM5.2 7l6.8 4.5L18.8 7H5.2z"
 # Brand colors; None means "use the theme's text color" (GitHub and X are black/white marks).
-ICON_COLORS = {"github": None, "linkedin": "#0A66C2", "gmail": "#EA4335",
+ICON_COLORS = {"github": None, "linkedin": "#0A66C2", "mail": None,
                "instagram": "#E4405F", "x": None, "youtube": "#FF0000"}
 
 # Contact buttons: (file, label, url, icon). Drawn as our own SVG pills so they match the theme.
 LINKS = [
     ("github", "GITHUB", f"https://github.com/{USER}", "github"),
     ("linkedin", "LINKEDIN", "https://linkedin.com/in/braian-quintian", "linkedin"),
-    ("email", "EMAIL", f"mailto:{EMAIL}", "gmail"),
+    ("email", "EMAIL", f"mailto:{EMAIL}", "mail"),
     ("instagram", "INSTAGRAM", "https://www.instagram.com/braian.qloq/", "instagram"),
 ]
 BRAND_LINKS = [
