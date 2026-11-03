@@ -65,7 +65,7 @@ const braqon = {
 <a name="projects"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04-es.svg"/><img src="assets/light/s04-es.svg" width="100%" alt="proyectos"/></picture>
 
-<a href="https://github.com/braqon/express-version-api"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/project-es.svg"/><img src="assets/light/project-es.svg" width="100%" alt="express-version-api"/></picture></a>
+<a href="https://github.com/braqon-dev/express-version-api"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/project-es.svg"/><img src="assets/light/project-es.svg" width="100%" alt="express-version-api"/></picture></a>
 
 <a name="telemetry"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s05-es.svg"/><img src="assets/light/s05-es.svg" width="100%" alt="telemetría"/></picture>

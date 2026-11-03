@@ -457,7 +457,7 @@ def readme(lang):
 </table>
 
 {sec(4, "projects")}
-<a href="https://github.com/{USER}/express-version-api">{asset("project", lang, "express-version-api")}</a>
+<a href="https://github.com/braqon-dev/express-version-api">{asset("project", lang, "express-version-api")}</a>
 
 {sec(5, "telemetry")}
 <p align="center">
