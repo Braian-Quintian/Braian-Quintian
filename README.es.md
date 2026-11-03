@@ -6,19 +6,19 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/braian-quintian"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:bquintianromero@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://www.instagram.com/braian.qloq/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
-  <a href="https://github.com/braqon"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://github.com/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-github.svg"/><img src="assets/light/l-github.svg" height="34" alt="GITHUB"/></picture></a>
+  <a href="https://linkedin.com/in/braian-quintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
+  <a href="mailto:bquintianromero@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
+  <a href="https://www.instagram.com/braian.qloq/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-instagram.svg"/><img src="assets/light/l-instagram.svg" height="34" alt="INSTAGRAM"/></picture></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Español-00b4d8?style=flat-square" alt="Español"/>
-  <a href="README.md"><img src="https://img.shields.io/badge/English-30363d?style=flat-square" alt="English"/></a>
-  <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views"/>
+  <a href="README.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/lang-en-off.svg"/><img src="assets/light/lang-en-off.svg" height="30" alt="EN"/></picture></a>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/lang-es-on.svg"/><img src="assets/light/lang-es-on.svg" height="30" alt="ES"/></picture>
+  <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
-<p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#projects">proyectos</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
+<p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#building">construyendo</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-es.svg"/><img src="assets/light/now-es.svg" width="100%" alt="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica."/></picture>
 
@@ -54,36 +54,33 @@ const braqon = {
 <a name="stack"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03-es.svg"/><img src="assets/light/s03-es.svg" width="100%" alt="stack"/></picture>
 
-<table align="center">
-  <tr><td align="center" width="170"><b>🎨 Frontend</b></td><td><img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,angular,tailwind&perline=8" alt="🎨 Frontend"/></td></tr>
-  <tr><td align="center" width="170"><b>⚙️ Backend</b></td><td><img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,bun,python&perline=8" alt="⚙️ Backend"/></td></tr>
-  <tr><td align="center" width="170"><b>🗄️ Datos</b></td><td><img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,sqlite&perline=8" alt="🗄️ Datos"/></td></tr>
-  <tr><td align="center" width="170"><b>☁️ Cloud y herramientas</b></td><td><img src="https://skillicons.dev/icons?i=aws,terraform,docker,linux,git,github,postman,vscode&perline=8" alt="☁️ Cloud y herramientas"/></td></tr>
-  <tr><td align="center" width="170"><b>📚 Aprendiendo</b></td><td><img src="https://skillicons.dev/icons?i=java,spring,graphql&perline=8" alt="📚 Aprendiendo"/></td></tr>
-</table>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/stack-es.svg"/><img src="assets/light/stack-es.svg" width="100%" alt="stack"/></picture>
 
-<a name="projects"></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04-es.svg"/><img src="assets/light/s04-es.svg" width="100%" alt="proyectos"/></picture>
+<a name="building"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04-es.svg"/><img src="assets/light/s04-es.svg" width="100%" alt="construyendo"/></picture>
 
-<a href="https://github.com/braqon-dev/express-version-api"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/project-es.svg"/><img src="assets/light/project-es.svg" width="100%" alt="express-version-api"/></picture></a>
+<p align="center">
+  <a href="https://github.com/braqon-dev/express-version-api"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/p-express-es.svg"/><img src="assets/light/p-express-es.svg" width="49%" alt="express-version-api"/></picture></a>
+  <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/p-braqon-es.svg"/><img src="assets/light/p-braqon-es.svg" width="49%" alt="BRAQON"/></picture></a>
+</p>
+
+<p align="center"><sub><b>BRAQON en internet</b></sub><br/>
+  <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-github.svg"/><img src="assets/light/l-b-github.svg" height="30" alt="BRAQON-DEV"/></picture></a>
+  <a href="https://x.com/braqondev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-x.svg"/><img src="assets/light/l-b-x.svg" height="30" alt="X @BRAQONDEV"/></picture></a>
+  <a href="https://www.linkedin.com/company/braqon/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-linkedin.svg"/><img src="assets/light/l-b-linkedin.svg" height="30" alt="LINKEDIN"/></picture></a>
+  <a href="https://www.youtube.com/@braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-youtube.svg"/><img src="assets/light/l-b-youtube.svg" height="30" alt="YOUTUBE"/></picture></a>
+  <a href="https://www.instagram.com/braqondev/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-instagram.svg"/><img src="assets/light/l-b-instagram.svg" height="30" alt="INSTAGRAM"/></picture></a>
+</p>
 
 <a name="telemetry"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s05-es.svg"/><img src="assets/light/s05-es.svg" width="100%" alt="telemetría"/></picture>
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=braqon&theme=github_dark"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=braqon&theme=default" width="100%" alt="profile details"/></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/braqon/braqon/output/telemetry-es-dark.svg"/><img src="https://raw.githubusercontent.com/braqon/braqon/output/telemetry-es-light.svg" width="100%" alt="GitHub telemetry"/></picture>
 </p>
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=braqon&theme=github_dark"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=braqon&theme=default" height="165" alt="stats"/></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=braqon&theme=github_dark"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=braqon&theme=default" height="165" alt="top languages"/></picture>
-</p>
-<p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=braqon&hide_border=true&theme=github-dark-blue"/><img src="https://streak-stats.demolab.com?user=braqon&hide_border=true&theme=default" height="165" alt="streak"/></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=braqon&theme=github_dark&utcOffset=-5"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=braqon&theme=default&utcOffset=-5" height="165" alt="productive time"/></picture>
-</p>
-<p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/braqon/braqon/output/github-snake-dark.svg"/><img src="https://raw.githubusercontent.com/braqon/braqon/output/github-snake.svg" height="170" alt="contribution snake"/></picture>
-  <br/><sub>🐍 una serpiente comiéndose mis contribuciones, se actualiza cada 12 horas</sub>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/braqon/braqon/output/github-snake-dark.svg"/><img src="https://raw.githubusercontent.com/braqon/braqon/output/github-snake.svg" width="100%" alt="contribution snake"/></picture>
+  <br/><sub>🐍 una serpiente comiéndose mis contribuciones · la telemetría y la serpiente se actualizan cada 12 horas</sub>
 </p>
 
 <a name="off-keyboard"></a>
@@ -101,10 +98,6 @@ const braqon = {
 
 <p align="center"><b>🎧 Programando con</b><br/>
   <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&redirect=true"><img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31s5hjyn255z2to7qh4jy7f3lsve&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=true&hide_remaster=true&bar_color_cover=true" alt="Spotify"/></a>
-</p>
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="dev quote"/>
 </p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/footer-es.svg"/><img src="assets/light/footer-es.svg" width="100%" alt="exit"/></picture>
