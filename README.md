@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-github.svg"/><img src="assets/light/l-github.svg" height="34" alt="GITHUB"/></picture></a>
   <a href="https://linkedin.com/in/braian-quintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
-  <a href="mailto:bquintianromero@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
+  <a href="mailto:hola@braqon.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
   <a href="https://www.instagram.com/braian.qloq/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-instagram.svg"/><img src="assets/light/l-instagram.svg" height="34" alt="INSTAGRAM"/></picture></a>
 </p>
 
@@ -44,7 +44,7 @@ const braqon = {
 - 💳 By day I wire up the ways Latin America pays (bank transfers, wallets, cards, cash and crypto) behind **one API**.
 - 🔐 I care about the boring stuff that keeps money safe: secure-by-default code, least privilege and reviews that actually happen.
 - 🎓 Systems Engineering student. Learning out loud.
-- 📫 Reach me at **bquintianromero@gmail.com**
+- 📫 Reach me at **hola@braqon.dev**
 
 <a name="rails"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s02-en.svg"/><img src="assets/light/s02-en.svg" width="100%" alt="payment rails"/></picture>
