@@ -54,7 +54,13 @@ const braqon = {
 <a name="stack"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03-es.svg"/><img src="assets/light/s03-es.svg" width="100%" alt="stack"/></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/stack-es.svg"/><img src="assets/light/stack-es.svg" width="100%" alt="stack"/></picture>
+<table align="center">
+  <tr><td align="center" width="200"><b>🎨 Frontend</b></td><td><img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,angular,tailwind&perline=8" alt="🎨 Frontend"/></td></tr>
+  <tr><td align="center" width="200"><b>⚙️ Backend</b></td><td><img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,bun,python&perline=8" alt="⚙️ Backend"/></td></tr>
+  <tr><td align="center" width="200"><b>🗄️ Datos</b></td><td><img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,sqlite&perline=8" alt="🗄️ Datos"/></td></tr>
+  <tr><td align="center" width="200"><b>☁️ Cloud y herramientas</b></td><td><img src="https://skillicons.dev/icons?i=aws,terraform,docker,linux,git,github,postman,vscode&perline=8" alt="☁️ Cloud y herramientas"/></td></tr>
+  <tr><td align="center" width="200"><b>📚 Aprendiendo</b></td><td><img src="https://skillicons.dev/icons?i=java,spring,graphql&perline=8" alt="📚 Aprendiendo"/></td></tr>
+</table>
 
 <a name="building"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04-es.svg"/><img src="assets/light/s04-es.svg" width="100%" alt="construyendo"/></picture>
@@ -66,21 +72,29 @@ const braqon = {
 
 <p align="center"><sub><b>BRAQON en internet</b></sub><br/>
   <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-github.svg"/><img src="assets/light/l-b-github.svg" height="30" alt="BRAQON-DEV"/></picture></a>
-  <a href="https://x.com/braqondev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-x.svg"/><img src="assets/light/l-b-x.svg" height="30" alt="X @BRAQONDEV"/></picture></a>
-  <a href="https://www.linkedin.com/company/braqon/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-linkedin.svg"/><img src="assets/light/l-b-linkedin.svg" height="30" alt="LINKEDIN"/></picture></a>
-  <a href="https://www.youtube.com/@braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-youtube.svg"/><img src="assets/light/l-b-youtube.svg" height="30" alt="YOUTUBE"/></picture></a>
-  <a href="https://www.instagram.com/braqondev/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-instagram.svg"/><img src="assets/light/l-b-instagram.svg" height="30" alt="INSTAGRAM"/></picture></a>
+  <a href="https://x.com/braqondev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-x.svg"/><img src="assets/light/l-b-x.svg" height="30" alt="@BRAQONDEV"/></picture></a>
+  <a href="https://www.linkedin.com/company/braqon/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-linkedin.svg"/><img src="assets/light/l-b-linkedin.svg" height="30" alt="BRAQON"/></picture></a>
+  <a href="https://www.youtube.com/@braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-youtube.svg"/><img src="assets/light/l-b-youtube.svg" height="30" alt="@BRAQON"/></picture></a>
+  <a href="https://www.instagram.com/braqondev/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-instagram.svg"/><img src="assets/light/l-b-instagram.svg" height="30" alt="@BRAQONDEV"/></picture></a>
 </p>
 
 <a name="telemetry"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s05-es.svg"/><img src="assets/light/s05-es.svg" width="100%" alt="telemetría"/></picture>
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/braqon/braqon/output/telemetry-es-dark.svg"/><img src="https://raw.githubusercontent.com/braqon/braqon/output/telemetry-es-light.svg" width="100%" alt="GitHub telemetry"/></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=braqon&theme=github_dark"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=braqon&theme=default" width="100%" alt="profile details"/></picture>
+</p>
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=braqon&theme=github_dark"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=braqon&theme=default" height="165" alt="stats"/></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=braqon&theme=github_dark"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=braqon&theme=default" height="165" alt="top languages"/></picture>
+</p>
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=braqon&hide_border=true&theme=github-dark-blue"/><img src="https://streak-stats.demolab.com?user=braqon&hide_border=true&theme=default" height="165" alt="streak"/></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=braqon&theme=github_dark&utcOffset=-5"/><img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=braqon&theme=default&utcOffset=-5" height="165" alt="productive time"/></picture>
 </p>
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/braqon/braqon/output/github-snake-dark.svg"/><img src="https://raw.githubusercontent.com/braqon/braqon/output/github-snake.svg" width="100%" alt="contribution snake"/></picture>
-  <br/><sub>🐍 una serpiente comiéndose mis contribuciones · la telemetría y la serpiente se actualizan cada 12 horas</sub>
+  <br/><sub>🐍 una serpiente comiéndose mis contribuciones, se actualiza cada 12 horas</sub>
 </p>
 
 <a name="off-keyboard"></a>
