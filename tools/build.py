@@ -35,7 +35,7 @@ ICON_COLORS = {"github": None, "linkedin": "#0A66C2", "mail": None,
 # Contact buttons: (file, label, url, icon). Drawn as our own SVG pills so they match the theme.
 LINKS = [
     ("github", "GITHUB", f"https://github.com/{USER}", "github"),
-    ("linkedin", "LINKEDIN", "https://linkedin.com/in/braian-quintian", "linkedin"),
+    ("linkedin", "LINKEDIN", "https://www.linkedin.com/in/bquintian", "linkedin"),
     ("email", "EMAIL", f"mailto:{EMAIL}", "mail"),
     ("instagram", "INSTAGRAM", "https://www.instagram.com/braian.qloq/", "instagram"),
 ]
@@ -648,11 +648,11 @@ def readme(lang):
   <img src="https://komarev.com/ghpvc/?username={USER}&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
+{asset("now", lang, t["now_1"])}
+
 <a href="https://www.npmjs.com/package/braqon">{asset("terminal", lang, "terminal: whoami, ls ~/braqon-dev, cat stack.txt, npx braqon")}</a>
 
-<p align="center"><code>{USER}@github:~$ cat README.md</code><br/><sub>{nav}</sub></p>
-
-{asset("now", lang, t["now_1"])}
+<p align="center"><sub>{nav}</sub></p>
 
 {sec(1, "whoami")}
 ```ts

@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-github.svg"/><img src="assets/light/l-github.svg" height="34" alt="GITHUB"/></picture></a>
-  <a href="https://linkedin.com/in/braian-quintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
+  <a href="https://www.linkedin.com/in/bquintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
   <a href="mailto:hola@braqon.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
   <a href="https://www.instagram.com/braian.qloq/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-instagram.svg"/><img src="assets/light/l-instagram.svg" height="34" alt="INSTAGRAM"/></picture></a>
 </p>
@@ -18,11 +18,11 @@
   <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-es.svg"/><img src="assets/light/now-es.svg" width="100%" alt="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica."/></picture>
+
 <a href="https://www.npmjs.com/package/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/terminal-es.svg"/><img src="assets/light/terminal-es.svg" width="100%" alt="terminal: whoami, ls ~/braqon-dev, cat stack.txt, npx braqon"/></picture></a>
 
-<p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#building">construyendo</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-es.svg"/><img src="assets/light/now-es.svg" width="100%" alt="Lidero ingeniería en 88Pay: una API para las formas de pagar en Latinoamérica."/></picture>
+<p align="center"><sub><a href="#whoami">whoami</a> · <a href="#rails">rieles</a> · <a href="#stack">stack</a> · <a href="#building">construyendo</a> · <a href="#telemetry">telemetría</a> · <a href="#off-keyboard">fuera del teclado</a></sub></p>
 
 <a name="whoami"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s01-es.svg"/><img src="assets/light/s01-es.svg" width="100%" alt="whoami"/></picture>
