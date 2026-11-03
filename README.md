@@ -15,6 +15,8 @@
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/lang-en-on.svg"/><img src="assets/light/lang-en-on.svg" height="30" alt="EN"/></picture>
   <a href="README.es.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/lang-es-off.svg"/><img src="assets/light/lang-es-off.svg" height="30" alt="ES"/></picture></a>
+</p>
+<p align="center">
   <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
