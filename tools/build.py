@@ -127,8 +127,8 @@ def text(x, y, s, c, size=16, color=None, font=SANS, weight=400, anchor="start",
 S = 13
 h = S / 2
 GLYPHS = {
-    "B": (73, [f"M{h},{100-h}V{h}H40A21.75,21.75 0 0 1 40,50H{h}",
-               f"M{h},50H44A21.75,21.75 0 0 1 44,{100-h}H{h}"]),
+    # One continuous stroke so every corner is a join (no notch where strokes meet).
+    "B": (73, [f"M{h},50H44A21.75,21.75 0 0 1 44,{100-h}H{h}V{h}H40A21.75,21.75 0 0 1 40,50H{h}"]),
     "R": (74, [f"M{h},{100-h}V{h}H40A21.75,21.75 0 0 1 40,50H{h}", f"M36,50L70,{100-h}"]),
     "A": (84, [f"M3,{100-h}L42,{h}L81,{100-h}", "M21,68H63"]),
     "Q": (100, ["circle", "M62,66L93,97"]),
