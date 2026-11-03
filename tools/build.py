@@ -58,7 +58,7 @@ T = {
             ("whoami", "// who's behind the keyboard"),
             ("payment rails", "// one contract on top, many edge cases below"),
             ("stack", "// tools I reach for"),
-            ("building", "// open source under BRAQON"),
+            ("building", "// shipping under BRAQON"),
             ("telemetry", "// numbers, because engineers love numbers"),
             ("off-keyboard", "// the human part"),
         ],
@@ -76,7 +76,7 @@ T = {
         ],
         express_desc=["Versioned routes and APIs for Express.js,", "so /v1 and /v2 live together in peace."],
         express_meta="npm · JSR · GitHub Packages",
-        braqon_desc=["Open-source payments, POS and", "developer tools from Latin America."],
+        braqon_desc=["Payments, POS and developer tools", "from Latin America. Open source at the core."],
         braqon_meta="POS · coming soon",
         view="view →",
         footer_1="thanks for scrolling, see you in the next commit",
@@ -91,7 +91,7 @@ T = {
             ("whoami", "// quién está detrás del teclado"),
             ("rieles de pago", "// un contrato arriba, muchos casos borde abajo"),
             ("stack", "// las herramientas que uso"),
-            ("construyendo", "// open source bajo BRAQON"),
+            ("construyendo", "// publicando bajo BRAQON"),
             ("telemetría", "// números, porque a los ingenieros nos encantan"),
             ("fuera del teclado", "// la parte humana"),
         ],
@@ -109,7 +109,7 @@ T = {
         ],
         express_desc=["Rutas y APIs versionadas para Express.js,", "para que /v1 y /v2 convivan en paz."],
         express_meta="npm · JSR · GitHub Packages",
-        braqon_desc=["Pagos, POS y herramientas para", "devs, open source y hechas en LATAM."],
+        braqon_desc=["Pagos, POS y herramientas para devs,", "hechas en LATAM, con núcleo open source."],
         braqon_meta="POS · muy pronto",
         view="ver →",
         footer_1="gracias por llegar hasta aquí, nos vemos en el próximo commit",
@@ -159,6 +159,8 @@ def chip(x, y, label, c, dashed=False, size=14):
 
 
 # Geometric stroke glyphs for the BRAQON wordmark (cap height 100, stroke 13).
+# The Q tail is always BRAQON Cyan, like the tail of the bq mark (see braqon-dev/brand).
+CYAN = "#00b4d8"
 S = 13
 h = S / 2
 GLYPHS = {
@@ -166,7 +168,7 @@ GLYPHS = {
     "B": (73, [f"M{h},50H44A21.75,21.75 0 0 1 44,{100-h}H{h}V{h}H40A21.75,21.75 0 0 1 40,50H{h}"]),
     "R": (74, [f"M{h},{100-h}V{h}H40A21.75,21.75 0 0 1 40,50H{h}", f"M36,50L70,{100-h}"]),
     "A": (84, [f"M3,{100-h}L42,{h}L81,{100-h}", "M21,68H63"]),
-    "Q": (100, ["circle", "M62,66L93,97"]),
+    "Q": (100, ["circle", "tail:M74,74L98,98"]),
     "O": (100, ["circle"]),
     "N": (78, [f"M{h},{100-h}V{h}L{78-h},{100-h}V{h}"]),
 }
@@ -180,26 +182,50 @@ def wordmark(word, c, x, y, scale, color=None):
             delay = f'style="animation-delay:{0.12 * i:.2f}s"'
             if stroke == "circle":
                 parts.append(f'<circle class="g" {delay} cx="{cursor + 50}" cy="50" r="{50 - h}" pathLength="1"/>')
+            elif stroke.startswith("tail:"):
+                parts.append(f'<path class="g" {delay} stroke="{CYAN}" transform="translate({cursor},0)" '
+                             f'd="{stroke[5:]}" pathLength="1"/>')
             else:
                 parts.append(f'<path class="g" {delay} transform="translate({cursor},0)" d="{stroke}" pathLength="1"/>')
             i += 1
         cursor += width + 14
     return (f'<g transform="translate({x},{y}) scale({scale})" stroke="{color or c["fg"]}" '
-            f'stroke-width="{S}" stroke-linejoin="round" fill="none">{"".join(parts)}</g>'), cursor - 14
+            f'stroke-width="{S}" stroke-linecap="round" stroke-linejoin="round" fill="none">{"".join(parts)}</g>'), cursor - 14
+
+
+# The bq mark: the b of Braian and the tail of the Q of Quintian. Box 62x92, stroke 12.
+MARK_W, MARK_H = 62, 92
+
+
+def bq(color, x, y, scale):
+    return (f'<g transform="translate({x:.2f},{y:.2f}) scale({scale:.4f})" fill="none" stroke-width="12" '
+            f'stroke-linecap="round" stroke-linejoin="round">'
+            f'<path class="g" stroke="{color}" d="M6 6V58" pathLength="1"/>'
+            f'<circle class="g" style="animation-delay:.1s" stroke="{color}" cx="28" cy="58" r="22" pathLength="1"/>'
+            f'<path class="g" style="animation-delay:.3s" stroke="{CYAN}" d="M43.56 73.56L56 86" pathLength="1"/></g>')
+
+
+def lockup(c, x, y, scale):
+    """bq mark + wordmark, in wordmark units: the mark is 1.42x the cap height, then a half-cap gap.
+    Returns (svg, width)."""
+    ms = 142 / MARK_H
+    word, ww = wordmark("BRAQON", c, x + (MARK_W * ms + 50) * scale, y + 21 * scale, scale)
+    return bq(c["fg"], x, y, ms * scale) + word, (MARK_W * ms + 50 + ww) * scale
 
 
 # Drawn by default; the animation only hides strokes while it runs, so a viewer
 # without CSS animation still sees the full wordmark.
 DRAW_CSS = (".g{stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.1s cubic-bezier(.6,0,.2,1) backwards}"
-            "@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}")
+            "@keyframes draw{from{stroke-dashoffset:1;stroke-opacity:0}1%{stroke-opacity:1}to{stroke-dashoffset:0}}")
+# stroke-opacity hides the dot a round cap leaves on a zero-length dash before each stroke starts.
 
 # ── Assets ───────────────────────────────────────────────────────────────────
 
 def hero(t, c):
     height = 340
-    scale = 0.9
-    _, width = wordmark("BRAQON", c, 0, 0, 1)
-    mark, _ = wordmark("BRAQON", c, (W - width * scale) / 2, 58, scale)
+    scale = 0.85
+    _, width = lockup(c, 0, 0, scale)
+    mark, _ = lockup(c, (W - width) / 2, 36, scale)
     body = (
         '<defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">'
         f'<circle cx="2" cy="2" r="1" fill="{c["border"]}"/></pattern>'
@@ -302,7 +328,7 @@ def project_card(title, desc, meta, c, view, mark=False, live=True):
     width, height = 588, 220
     parts = [panel(1, 1, width - 2, height - 2, c, stroke=c["accent"] if live else None)]
     if mark:
-        logo, _ = wordmark("BRAQON", c, 30, 34, 0.3)
+        logo, _ = lockup(c, 30, 28, 0.27)
         parts.append(logo)
     else:
         parts.append(text(30, 62, e(title), c, size=24, color=c["accent"], font=MONO, weight=700))
