@@ -223,18 +223,29 @@ DRAW_CSS = (".g{stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.1s cubic
 
 # ── Assets ───────────────────────────────────────────────────────────────────
 
+
+def plano(c, w, h, r, cx, cy):
+    """Background: the construction lines of the bq mark (ring, stem, axes, cyan tail), clipped to the panel."""
+    s = r / 22
+    x, y = cx - 28 * s, cy - 58 * s
+    return (f'<defs><clipPath id="pc"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="18"/></clipPath></defs>'
+            f'<g clip-path="url(#pc)"><g transform="translate({x:.1f},{y:.1f}) scale({s:.3f})" fill="none" stroke-width="{1.4/s:.3f}">'
+            f'<g stroke="{c["border"]}" stroke-opacity=".5"><path d="M-400 58H400M28 -400V400M6 -400V400"/>'
+            f'<circle cx="28" cy="58" r="16"/><circle cx="28" cy="58" r="28"/></g>'
+            f'<g stroke="{c["border"]}"><path d="M6 6V58"/><circle cx="28" cy="58" r="22"/></g>'
+            f'<path d="M43.56 73.56L56 86" stroke="#00b4d8" stroke-opacity=".8"/>'
+            f'<circle cx="28" cy="58" r="{3.5/s:.2f}" fill="#00b4d8" stroke="none"/></g></g>')
+
 def hero(t, c):
     height = 340
     scale = 0.85
     _, width = lockup(c, 0, 0, scale)
     mark, _ = lockup(c, (W - width) / 2, 36, scale)
     body = (
-        '<defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">'
-        f'<circle cx="2" cy="2" r="1" fill="{c["border"]}"/></pattern>'
-        f'<radialGradient id="glow" cx="50%" cy="0%" r="70%"><stop offset="0" stop-color="{c["accent"]}" stop-opacity=".22"/>'
+        f'<defs><radialGradient id="glow" cx="50%" cy="0%" r="70%"><stop offset="0" stop-color="{c["accent"]}" stop-opacity=".22"/>'
         f'<stop offset="1" stop-color="{c["accent"]}" stop-opacity="0"/></radialGradient></defs>'
         + panel(1, 1, W - 2, height - 2, c, rx=18, fill=c["bg"])
-        + f'<rect x="1" y="1" width="{W-2}" height="{height-2}" rx="18" fill="url(#dots)" opacity=".6"/>'
+        + plano(c, W, height, height * 0.42, W * 0.86, height * 0.6)
         + f'<rect x="1" y="1" width="{W-2}" height="{height-2}" rx="18" fill="url(#glow)"/>'
         + mark
         + text(W / 2, 212, e(t["tagline"]), c, size=26, weight=600, anchor="middle")
