@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-github.svg"/><img src="assets/light/l-github.svg" height="34" alt="GITHUB"/></picture></a>
-  <a href="https://linkedin.com/in/braian-quintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
+  <a href="https://www.linkedin.com/in/bquintian"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-linkedin.svg"/><img src="assets/light/l-linkedin.svg" height="34" alt="LINKEDIN"/></picture></a>
   <a href="mailto:hola@braqon.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-email.svg"/><img src="assets/light/l-email.svg" height="34" alt="EMAIL"/></picture></a>
   <a href="https://www.instagram.com/braian.qloq/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-instagram.svg"/><img src="assets/light/l-instagram.svg" height="34" alt="INSTAGRAM"/></picture></a>
 </p>
@@ -18,11 +18,11 @@
   <img src="https://komarev.com/ghpvc/?username=braqon&base=273&label=views&color=00b4d8&style=flat-square" alt="views" height="22"/>
 </p>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-en.svg"/><img src="assets/light/now-en.svg" width="100%" alt="Leading engineering at 88Pay: one API for the ways Latin America pays."/></picture>
+
 <a href="https://www.npmjs.com/package/braqon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/terminal-en.svg"/><img src="assets/light/terminal-en.svg" width="100%" alt="terminal: whoami, ls ~/braqon-dev, cat stack.txt, npx braqon"/></picture></a>
 
-<p align="center"><code>braqon@github:~$ cat README.md</code><br/><sub><a href="#whoami">whoami</a> · <a href="#rails">rails</a> · <a href="#stack">stack</a> · <a href="#building">building</a> · <a href="#telemetry">telemetry</a> · <a href="#off-keyboard">off-keyboard</a></sub></p>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/now-en.svg"/><img src="assets/light/now-en.svg" width="100%" alt="Leading engineering at 88Pay: one API for the ways Latin America pays."/></picture>
+<p align="center"><sub><a href="#whoami">whoami</a> · <a href="#rails">rails</a> · <a href="#stack">stack</a> · <a href="#building">building</a> · <a href="#telemetry">telemetry</a> · <a href="#off-keyboard">off-keyboard</a></sub></p>
 
 <a name="whoami"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s01-en.svg"/><img src="assets/light/s01-en.svg" width="100%" alt="whoami"/></picture>
