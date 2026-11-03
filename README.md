@@ -2,7 +2,7 @@
 <a name="top"></a>
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/hero-en.svg"/><img src="assets/light/hero-en.svg" width="100%" alt="BRAQON · Braian Quintian · CTO @ 88Pay"/></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/hero-en.svg"/><img src="assets/light/hero-en.svg" width="100%" alt="BRAQON · Braian Quintian · Founder @ BRAQON · CTO @ 88Pay"/></picture>
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 ```ts
 const braqon = {
   name:     "Braian Quintian",
-  role:     "CTO @ 88Pay",
+  role:     ["Founder @ BRAQON", "CTO @ 88Pay"],
   based:    "Colombia 🇨🇴",
   builds:   ["payment APIs", "fintech platforms"],
   stack:    ["NestJS", "Next.js", "Angular", "TS"],
