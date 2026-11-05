@@ -75,6 +75,14 @@ const braqon = {
   <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/p-braqon-en.svg"/><img src="assets/light/p-braqon-en.svg" width="49%" alt="BRAQON"/></picture></a>
 </p>
 
+<p align="center">
+  <img src="assets/soliqon/soliqon-icono-128.png" width="64" alt="Soliqon"/><br/>
+  <b>Coming soon: Soliqon</b><br/>
+  <sub>A native API client for macOS. No account, no cloud, no telemetry. Your requests are <code>.http</code> files in your own folder, versioned with git.</sub><br/>
+  <sub>Swift and SwiftUI · open source under Apache-2.0 · soon at soliqon.braqon.dev</sub><br/>
+  <sub><b>A <a href="https://braqon.dev">BRAQON</a> product</b></sub>
+</p>
+
 <p align="center"><sub><b>BRAQON on the internet</b></sub><br/>
   <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-github.svg"/><img src="assets/light/l-b-github.svg" height="30" alt="BRAQON-DEV"/></picture></a>
   <a href="https://x.com/braqondev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-x.svg"/><img src="assets/light/l-b-x.svg" height="30" alt="@BRAQONDEV"/></picture></a>

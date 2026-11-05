@@ -582,6 +582,10 @@ COPY = {
             "🏀 If I'm not coding, I'm probably arguing about basketball.",
         ],
         coding_to="🎧 Coding to",
+        soon_title='Coming soon: Soliqon',
+        soon_desc='A native API client for macOS. No account, no cloud, no telemetry. Your requests are <code>.http</code> files in your own folder, versioned with git.',
+        soon_meta='Swift and SwiftUI · open source under Apache-2.0 · soon at soliqon.braqon.dev',
+        soon_by='A <a href="https://braqon.dev">BRAQON</a> product',
         back="back to top ↑",
     ),
     "es": dict(
@@ -621,6 +625,10 @@ COPY = {
             "🏀 Si no estoy programando, probablemente estoy discutiendo de basket.",
         ],
         coding_to="🎧 Programando con",
+        soon_title='Próximamente: Soliqon',
+        soon_desc='Cliente de APIs nativo para macOS. Sin cuenta, sin nube, sin telemetría. Tus peticiones son archivos <code>.http</code> en tu carpeta, versionados con git.',
+        soon_meta='Swift y SwiftUI · open source bajo Apache-2.0 · pronto en soliqon.braqon.dev',
+        soon_by='Un producto de <a href="https://braqon.dev">BRAQON</a>',
         back="volver arriba ↑",
     ),
 }
@@ -690,6 +698,14 @@ def readme(lang):
 <p align="center">
   <a href="https://github.com/braqon-dev/express-version-api">{asset("p-express", lang, "express-version-api", "49%")}</a>
   <a href="https://github.com/braqon-dev">{asset("p-braqon", lang, "BRAQON", "49%")}</a>
+</p>
+
+<p align="center">
+  <img src="assets/soliqon/soliqon-icono-128.png" width="64" alt="Soliqon"/><br/>
+  <b>{k["soon_title"]}</b><br/>
+  <sub>{k["soon_desc"]}</sub><br/>
+  <sub>{k["soon_meta"]}</sub><br/>
+  <sub><b>{k["soon_by"]}</b></sub>
 </p>
 
 <p align="center"><sub><b>{k["brand"]}</b></sub><br/>
