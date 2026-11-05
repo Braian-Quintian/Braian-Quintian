@@ -75,6 +75,14 @@ const braqon = {
   <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/p-braqon-es.svg"/><img src="assets/light/p-braqon-es.svg" width="49%" alt="BRAQON"/></picture></a>
 </p>
 
+<p align="center">
+  <img src="assets/soliqon/soliqon-icono-128.png" width="64" alt="Soliqon"/><br/>
+  <b>Próximamente: Soliqon</b><br/>
+  <sub>Cliente de APIs nativo para macOS. Sin cuenta, sin nube, sin telemetría. Tus peticiones son archivos <code>.http</code> en tu carpeta, versionados con git.</sub><br/>
+  <sub>Swift y SwiftUI · open source bajo Apache-2.0 · pronto en soliqon.braqon.dev</sub><br/>
+  <sub><b>Un producto de <a href="https://braqon.dev">BRAQON</a></b></sub>
+</p>
+
 <p align="center"><sub><b>BRAQON en internet</b></sub><br/>
   <a href="https://github.com/braqon-dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-github.svg"/><img src="assets/light/l-b-github.svg" height="30" alt="BRAQON-DEV"/></picture></a>
   <a href="https://x.com/braqondev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/l-b-x.svg"/><img src="assets/light/l-b-x.svg" height="30" alt="@BRAQONDEV"/></picture></a>
